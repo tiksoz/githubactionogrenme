@@ -13,4 +13,9 @@ jobs:
       - name: Checkout Adimi
         uses: actions/checkout@v4
       - name: Enviroment variable listeleme 
-        run: printenv
+        run: |
+          echo "Hello World"
+          echo $OSMAN
+        env:
+          OSMAN: "Bu Osman Bizim Osman bunu bu adımda tanımladım"
+          
