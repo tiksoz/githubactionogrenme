@@ -1,0 +1,17 @@
+name: Test Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Adimi
+        uses: actions/checkout@v4
+      - name: Enviroment variable listeleme 
+        run: printenv
