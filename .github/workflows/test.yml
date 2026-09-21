@@ -33,5 +33,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: output-log-file
+      - name: deneme
+        run: |
+          ls -al
+          pwd
+          echo output.log
+          echo ./output.log
       - name: Echo
         run: echo output.log
