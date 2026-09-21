@@ -37,7 +37,7 @@ jobs:
         run: |
           ls -al
           pwd
-          echo output.log
-          echo ./output.log
+          cat output.log
+          cat ./output.log
       - name: Echo
-        run: echo output.log
+        run: cat output.log
