@@ -36,5 +36,3 @@ jobs:
         run: |
           echo ${{ secrets.DOCKERHUB_USERNAME }}
           echo ${{ secrets.DOCKERHUB_TOKEN }}
-  
-          
