@@ -15,11 +15,13 @@ jobs:
     env:
       SELAMLAMA: Hello
     steps:
-      - name: Checkout Adimi
+      - id: checkout
         uses: actions/checkout@v4
-
-      - shell: bash
-        env:
-          OSMAN: ${{ github.repository_owner }}
+        
+      - name: Generate 0 or 1
+        id: generate_number
+        run: echo "random_number=$(($RANDOM % 2))" >> $GITHUB_OUTPUT
+      
+      - name: Pass or fail
         run: |
-          echo "$OSMAN"
+          echo ${{ steps.generate_number.outputs }}
